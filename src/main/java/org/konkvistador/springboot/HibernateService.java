@@ -6,12 +6,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class JdbcService {
+public class HibernateService {
 
-    private final JdbcRepository jdbcRepository;
+    private final HibernateRepository jdbcRepository;
 
     @Autowired
-    public JdbcService(JdbcRepository jdbcRepository) {
+    public HibernateService(HibernateRepository jdbcRepository) {
         this.jdbcRepository = jdbcRepository;
     }
 

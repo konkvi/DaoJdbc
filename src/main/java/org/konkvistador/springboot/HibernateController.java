@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class JdbcController {
+public class HibernateController {
 
-    private final JdbcService jdbcService;
+    private final HibernateService hibernateService;
 
     @Autowired
-    public JdbcController(JdbcService jdbcService) {
-        this.jdbcService = jdbcService;
+    public HibernateController(HibernateService hibernateService) {
+        this.hibernateService = hibernateService;
     }
 
     @GetMapping("/products/fetch-product")
     public List<String> fetchProduct(@RequestParam String name) {
-        return jdbcService.getProductName(name);
+        return hibernateService.getProductName(name);
     }
 }
